@@ -16,4 +16,8 @@ module DeploymentsHelper
     type = type.type if type.is_a?(Deployment)
     DISPLAY_NAMES[type] || "Deployment"
   end
+
+  def current_deployment
+    @current_deployment
+  end
 end

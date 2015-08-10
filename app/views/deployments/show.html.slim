@@ -1,0 +1,20 @@
+header.page-header
+  h1
+    ' #{current_deployment.name}
+    span.small-text= display_name current_deployment.type
+
+.page-content
+  .main
+    header.main-header
+      h3 Cluster Overview
+    .box
+      .box-header
+         h4 Alerts
+      .box-content
+        table.border-table
+          thead
+            tr
+              th.align-center Status
+              th.align-center Name
+              th.align-center Output
+          tbody
