@@ -9,6 +9,14 @@ The contained project serves as the frontend/UI layer of the Platform Engineerin
 * Database for this project is purely mocked hashes.  We chose this to limit the additional steps required to get started.
 * We use slim for building well formed HTML: http://slim-lang.com/
 
+### Models
+
+While the model relationship in this example is degraded to a basic
+stub, think of it this way:
+
+* Account have many deployments
+* Deployment has many capsules
+
 ##Work Sample
 
 * Add the necessary functionality to consume the Alerts for a deployment.
