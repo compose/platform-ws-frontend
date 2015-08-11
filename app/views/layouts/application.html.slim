@@ -1,19 +1,6 @@
-= megatron_layout 'application', custom_nav: true do
+= megatron_layout do
   - stylesheets do
     = stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true
 
   - javascripts do
     = javascript_include_tag "application", "data-turbolinks-track" => true
-
-  - primary_nav do |nav|
-    = nav.item 'Deployments', "/",
-      icon: 'deployments',
-      class: 'here'
-
-    = nav.item 'Account', "/account",
-      icon: 'account_circle'
-    
-    = nav.item 'Support', "/tickets",
-      icon: 'question_line'
-    
-    = nav.sign_out

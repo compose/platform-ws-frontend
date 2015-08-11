@@ -1,20 +1,18 @@
-header.page-header
-  h1 Deployments
+- page_header 'Deployments'
 
-.page-content
-  .main
-    - @deployment_types.each do |type, deployments|
-      h6= display_name(type)
+- main
+  - @deployment_types.each do |type, deployments|
+    h6= display_name(type)
 
-      .wide
-        .box-table
-          - deployments.sort_by { |d| d.name || d.id.to_s }.each do |deployment|
+    .wide
+      .box-table
+        - deployments.sort_by { |d| d.name || d.id.to_s }.each do |deployment|
 
-            .table-row
-              .table-cell
-                span.deployment_small_icon aria-hidden='true'
-                '
-                a href="/deployments/#{deployment.name}"
-                  = deployment.name
-              .table-cell.one-of-six.small-text.gray-text.text-right
-                = 'us-east'
+          .table-row
+            .table-cell
+              span.deployment_small_icon aria-hidden='true'
+              '
+              a href="/deployments/#{deployment.name}"
+                = deployment.name
+            .table-cell.one-of-six.small-text.gray-text.text-right
+              = 'us-east'
