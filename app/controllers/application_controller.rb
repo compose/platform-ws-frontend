@@ -4,4 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   rescue_from RecordNotFound, with: -> { render status: 404, text: "four-oh-four" }
+
+  helper_method :current_account
+  def current_account
+    Account.find(params[:slug] || "worksample")
+  end
 end
