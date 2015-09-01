@@ -24,5 +24,5 @@ stub, think of it this way:
 
 ***HINTS:***
 
-* Make sure you look back at the https://github.com/compose/platform-ws-services for the alert srevice
+* Make sure you look back at the https://github.com/compose/platform-ws-services for the alert service
 * If you are unfamiliar with Ruby HTTP clients, take a look at `restclient` for ease of use.
