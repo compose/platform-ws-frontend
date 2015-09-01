@@ -20,7 +20,7 @@ stub, think of it this way:
 ##Work Sample
 
 * Add the necessary functionality to consume the Alerts for a deployment.
-* After retreiving the alerts, design and format the alerts for customers to view.  For informatoin on formatting posibilities, see: http://megatron-docs.herokuapp.com/
+* After retreiving the alerts, design and format the alerts for customers to view.  For information on formatting posibilities, see: http://megatron-docs.herokuapp.com/
 
 ***HINTS:***
 
