@@ -14,7 +14,7 @@ The contained project serves as the frontend/UI layer of the Platform Engineerin
 While the model relationship in this example is degraded to a basic
 stub, think of it this way:
 
-* Account have many deployments
+* Accounts have many deployments
 * Deployment has many capsules
 
 ##Work Sample
