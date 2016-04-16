@@ -15,6 +15,8 @@ To ease your deployment needs we have provided a Vagrantfile. To deploy your app
 
 The app will be available at http://10.0.32.5:3000
 
+Note: The Vagrantfile requires Vagrant 1.5 or newer
+
 ### Models
 
 While the model relationship in this example is degraded to a basic
