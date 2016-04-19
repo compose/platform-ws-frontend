@@ -16,7 +16,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         if [ ! -f /var/lock/provision.lock ]; then
           apt-get update --assume-yes
           apt-get install nodejs --assume-yes
-          gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+          apt-get install gnupg2 --assume-yes
+          gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
           curl -sSL https://get.rvm.io | bash -s stable --ruby=2.0.0 --gems=bundler
           source /usr/local/rvm/scripts/rvm
           rvm use 2.0.0 --default
