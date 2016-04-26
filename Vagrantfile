@@ -48,7 +48,7 @@ start on net-device-up IFACE=eth1 and runlevel [2345]
 stop on runlevel [!2345]
 
 script
-  /etc/platform-ws-frontend/launch.sh
+  /etc/platform-ws-frontend/launch.sh 2>&1 tee -a /var/log/platform-ws-frontend.log /vagrant/platform-ws-frontend.log
 end script
 EOL
           initctl reload-configuration
