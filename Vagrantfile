@@ -10,6 +10,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     compose.vm.box="geerlingguy/ubuntu1404"
     compose.vm.box_version = "1.1.0"
 
+    compose.vm.provider "virtualbox" do |v|
+      v.memory = 512
+    end
+
     compose.vm.network "private_network", ip:"10.0.32.5"
     compose.vm.provision :shell do |sh|
       sh.inline = <<-EOF
@@ -25,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           gem install bundler
           mkdir -p /etc/platform-ws-frontend
           cat > /etc/platform-ws-frontend/launch.sh <<EOL
-#!/bin/bash          
+#!/bin/bash
 source /usr/local/rvm/scripts/rvm
 while [ ! -f /vagrant/bin/rails ]
 do
